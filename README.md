@@ -19,22 +19,21 @@ Las prácticas se centran en el diseño e implementación de sistemas embebidos 
 
 ## 📁 Estructura del repositorio
 
-El repositorio está organizado por prácticas y ejercicios:
-
-📁 Practica1
+```
+Practica1/
 ├── Practica1-Ej3.1-AO.c
 ├── Practica1-Ej4.1-AO.c
 ├── Practica1-Ej4.2-AO.c
 └── Practica1-Ej5.1-AO.c
 
-📁 Practica2
+Practica2/
 ├── Practica2-Ej2.1-AO.c
 ├── Practica2-Ej3.1-AO.c
 ├── Practica2-Ej4.1-AO.c
 ├── Practica2-Ej5.1-AO.c
 └── Practica2-Ej6.1-AO.c
 
-📁 Practica3
+Practica3/
 ├── Practica3-Ej1.1-CodigoBase.c
 ├── Practica3-Ej2.1-AO.c
 ├── Practica3-Ej2.2-AO.c
@@ -46,6 +45,7 @@ El repositorio está organizado por prácticas y ejercicios:
 ├── Practica3-Ej6.1-AO.c
 ├── Practica3-Ej7.1-AO.c
 └── Practica3-Ej8.1-AO.c
+```
 
 ---
 
@@ -70,24 +70,6 @@ A lo largo de las prácticas se analizan situaciones relacionadas con:
 * Impacto de ISR en tareas críticas
 
 El objetivo es comprender cómo el sistema responde ante condiciones adversas y cómo mantener su comportamiento en tiempo real.
-
----
-
-## 🚀 Compilación y ejecución (ESP-IDF)
-# Configurar entorno
-. $HOME/esp/esp-idf/export.sh
-
-# Seleccionar target ESP32
-idf.py set-target esp32
-
-# Compilar proyecto
-idf.py build
-
-# Flashear al dispositivo
-idf.py -p /dev/ttyUSB0 flash
-
-# Monitor serie
-idf.py monitor
 
 ---
 
