@@ -21,104 +21,33 @@ Las prácticas se centran en el diseño e implementación de sistemas embebidos 
 
 El repositorio está organizado por prácticas y ejercicios:
 
-Practica1/
-┣ Practica1-Ej3.1-AO.c
-┣ Practica1-Ej4.1-AO.c
-┣ Practica1-Ej4.2-AO.c
-┗ Practica1-Ej5.1-AO.c
+📁 Practica1
+├── Practica1-Ej3.1-AO.c
+├── Practica1-Ej4.1-AO.c
+├── Practica1-Ej4.2-AO.c
+└── Practica1-Ej5.1-AO.c
 
-Practica2/
-┣ Practica2-Ej2.1-AO.c
-┣ Practica2-Ej3.1-AO.c
-┣ Practica2-Ej4.1-AO.c
-┣ Practica2-Ej5.1-AO.c
-┗ Practica2-Ej6.1-AO.c
+📁 Practica2
+├── Practica2-Ej2.1-AO.c
+├── Practica2-Ej3.1-AO.c
+├── Practica2-Ej4.1-AO.c
+├── Practica2-Ej5.1-AO.c
+└── Practica2-Ej6.1-AO.c
 
-Practica3/
-┣ Practica3-Ej1.1-CodigoBase.c
-┣ Practica3-Ej2.1-AO.c
-┣ Practica3-Ej2.2-AO.c
-┣ Practica3-Ej2.3-AO.c
-┣ Practica3-Ej3.1-AO.c
-┣ Practica3-Ej4.1-AO.c
-┣ Practica3-Ej4.2-AO.c
-┣ Practica3-Ej5.1-AO.c
-┣ Practica3-Ej6.1-AO.c
-┣ Practica3-Ej7.1-AO.c
-┗ Practica3-Ej8.1-AO.c
-
----
-
-# 📚 Descripción de las prácticas
+📁 Practica3
+├── Practica3-Ej1.1-CodigoBase.c
+├── Practica3-Ej2.1-AO.c
+├── Practica3-Ej2.2-AO.c
+├── Practica3-Ej2.3-AO.c
+├── Practica3-Ej3.1-AO.c
+├── Practica3-Ej4.1-AO.c
+├── Practica3-Ej4.2-AO.c
+├── Practica3-Ej5.1-AO.c
+├── Practica3-Ej6.1-AO.c
+├── Practica3-Ej7.1-AO.c
+└── Practica3-Ej8.1-AO.c
 
 ---
-
-## 🟦 Práctica 1 – Introducción a ESP32 y periféricos
-
-En esta práctica se introducen los fundamentos del ESP32 y el uso de periféricos básicos, especialmente el **ADC (convertidor analógico-digital)**.
-
-### 🔧 Ejemplo relevante: Lectura de ADC
-adc_oneshot_read(adc1_handle, ADC_CHANNEL, &adc_raw);
-voltaje = (adc_raw / 4095.0) * 3.3;
-
-### 🎯 Objetivos
-
-* Configuración del ADC en modo one-shot
-* Lectura de señales analógicas
-* Conversión de valores a voltaje real
-* Gestión de errores con `esp_err_t`
-
-### 🧠 Conceptos trabajados
-
-* Inicialización de periféricos
-* Adquisición de datos en tiempo real
-* Manejo de errores hardware
-* Programación básica en ESP-IDF
-
----
-
-## 🟨 Práctica 2 – FreeRTOS y planificación de tareas
-
-En esta práctica se trabaja con **concurrencia mediante FreeRTOS**, implementando múltiples tareas con diferentes frecuencias.
-
-### 🔧 Ejemplo relevante: tareas periódicas
-xTaskCreate(tareaLED3Hz, "LED_3Hz", STACK_SIZE, NULL, 1, NULL);
-xTaskCreate(tareaLED6Hz, "LED_6Hz", STACK_SIZE, NULL, 1, NULL);
-
-### 🎯 Objetivos
-
-* Creación y gestión de tareas en FreeRTOS
-* Planificación temporal (tareas periódicas)
-* Uso de `vTaskDelayUntil`
-* Control de GPIO (LEDs)
-* Monitorización del sistema con `vTaskGetRunTimeStats`
-
-### 🧠 Conceptos trabajados
-
-* Concurrencia
-* Planificación en tiempo real
-* Medición de carga de CPU
-* Análisis de rendimiento del sistema
-* Comportamiento determinista vs no determinista
-
----
-
-## 🟥 Práctica 3 – Interrupciones y tolerancia a fallos
-
-En esta práctica se introduce el uso de **interrupciones (ISR)** y su interacción con el sistema en tiempo real.
-
-### 🔧 Ejemplo relevante: ISR con cola
-static void IRAM_ATTR isr_handler(void *arg)
-{
-    xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
-}
-
-### 🎯 Objetivos
-
-* Configuración de interrupciones GPIO
-* Comunicación entre ISR y tareas mediante colas
-* Separación entre contexto de interrupción y tareas
-* Análisis del impacto de ISR en el sistema
 
 ### 🧠 Conceptos trabajados
 
