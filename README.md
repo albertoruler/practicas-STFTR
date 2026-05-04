@@ -34,7 +34,6 @@ Practica2/
 └── Practica2-Ej6.1-AO.c
 
 Practica3/
-├── Practica3-Ej1.1-CodigoBase.c
 ├── Practica3-Ej2.1-AO.c
 ├── Practica3-Ej2.2-AO.c
 ├── Practica3-Ej2.3-AO.c
@@ -45,6 +44,13 @@ Practica3/
 ├── Practica3-Ej6.1-AO.c
 ├── Practica3-Ej7.1-AO.c
 └── Practica3-Ej8.1-AO.c
+
+Practica4/
+├── Practica4-Ej2.1-AO.c
+├── Practica4-Ej3.1-AO.c
+├── Practica4-Ej4.1-AO.c
+└── Practica4-Ej4.2-AO.c
+
 ```
 
 ---
